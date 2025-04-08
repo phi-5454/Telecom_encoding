@@ -42,24 +42,24 @@ add_compile_options(
 )
 
 # Include paths
-set(INCLUDE_DIRS ${INCLUDE_DIRS} ${PROJECT_SOURCE_DIR}/include/sds)
+set(INCLUDE_DIRS ${INCLUDE_DIRS} ${PROJECT_SOURCE_DIR}/include)
 
 # Assign the include directories
 include_directories(${INCLUDE_DIRS})
 
 # Find library sources
-file(GLOB_RECURSE LIB_SRC_FILES include/*/*.c)
+#file(GLOB_RECURSE LIB_SRC_FILES include/*/*.c)
 
 # Build static/shared library
-add_library(${PROJECT_NAME}_LIB STATIC ${LIB_SRC_FILES})
+#add_library(${PROJECT_NAME}_LIB STATIC ${LIB_SRC_FILES})
 
 # Install library
-install(TARGETS ${PROJECT_NAME}_LIB DESTINATION lib)
+#install(TARGETS ${PROJECT_NAME}_LIB DESTINATION lib)
 
 # Install library headers
-file(GLOB_RECURSE LIB_INC_FILES include/*/*.h)
-install(FILES ${LIB_INC_FILES} DESTINATION include)
+#file(GLOB_RECURSE LIB_INC_FILES include/*/*.h)
+#install(FILES ${LIB_INC_FILES} DESTINATION include)
 
 set(SOURCE_FILES src/main.c)
 add_executable(telecom_encoding ${SOURCE_FILES})
-target_link_libraries(${PROJECT_NAME} ${PROJECT_NAME}_LIB)
+#target_link_libraries(${PROJECT_NAME} ${PROJECT_NAME}_LIB)
