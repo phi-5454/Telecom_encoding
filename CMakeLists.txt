@@ -8,6 +8,8 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/bin")
 project(${PROJECT_NAME})
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c17")
 
+# For static code analysis
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Enable strict warnings and -pedantic for all targets
 add_compile_options(
